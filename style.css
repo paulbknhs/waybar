@@ -3,24 +3,18 @@
 /* @import "gruvbox.css"; */
 
 * {
-  font-family: "Iosevka Nerd Font";
-  font-size: 16px;
-  min-height: 0;
-  font-weight: bold;
+  font-family: "NotoSansM Nerd Font";
+  font-size: 14px;
+  min-height: 20px;
+  font-weight: normal;
+  color: @foreground;
 }
 
 window#waybar {
   background: transparent;
   background-color: @background;
-  color: @foreground;
   transition-property: background-color;
   transition-duration: 0.1s;
-}
-
-#window {
-  margin: 2;
-  padding-left: 8;
-  padding-right: 8;
 }
 
 button {
@@ -35,13 +29,15 @@ button:hover {
 }
 
 #workspaces button {
-  padding: 0 4px;
+  padding: 2px;
+  color: @blue;
+  border-top: 2px solid @blue;
 }
 
 #workspaces button.focused {
   background-color: rgba(0, 0, 0, 0.3);
-  color: @blue;
-  border-top: 2px solid @blue;
+  color: @white;
+  border-bottom: 2px solid @white;
 }
 
 #workspaces button.urgent {

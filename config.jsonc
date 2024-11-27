@@ -2,10 +2,11 @@
 {
   // "layer": "top", // Waybar at top layer
   // "position": "bottom", // Waybar position (top|bottom|left|right)
-  // "width": 1280, // Waybar width
+  "width": 1920, // Waybar width
   "spacing": 8, // Gaps between modules (4px)
   // Choose the order of the modules
   "modules-left": [
+    "custom/power",
     "hyprland/workspaces",
     "hyprland/mode",
     "hyprland/scratchpad",
@@ -28,28 +29,26 @@
     "battery#bat2",
     "clock",
     "tray",
-    "custom/power",
   ],
   // Modules configuration
-  // "sway/workspaces": {
-  //     "disable-scroll": true,
-  //     "all-outputs": true,
-  //     "warp-on-scroll": false,
-  //     "format": "{name}: {icon}",
-  //     "format-icons": {
-  //         "1": "",
-  //         "2": "",
-  //         "3": "",
-  //         "4": "",
-  //         "5": "",
-  //         "urgent": "",
-  //         "focused": "",
-  //         "default": ""
-  //     }
-  // },
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "warp-on-scroll": false,
+    "format": "{icon}",
+    "format-icons": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "urgent": "",
+      "focused": "",
+      "default": "",
+    },
+  },
   "keyboard-state": {
-    "numlock": true,
-    "capslock": true,
+    "numlock": false,
+    "capslock": false,
     "format": "{name} {icon}",
     "format-icons": {
       "locked": "",
@@ -59,7 +58,7 @@
   "sway/mode": {
     "format": "<span style=\"italic\">{}</span>",
   },
-  "sway/scratchpad": {
+  "hyprland/scratchpad": {
     "format": "{icon} {count}",
     "show-empty": false,
     "format-icons": ["", ""],
@@ -101,7 +100,7 @@
   },
   "tray": {
     // "icon-size": 21,
-    "spacing": 10,
+    "spacing": 20,
   },
   "clock": {
     // "timezone": "America/New_York",
@@ -110,7 +109,7 @@
   },
   "cpu": {
     "format": "{usage}% ",
-    "tooltip": false,
+    "tooltip": true,
   },
   "memory": {
     "format": "{}% ",
@@ -130,7 +129,7 @@
   },
   "battery": {
     "states": {
-      // "good": 95,
+      "good": 95,
       "warning": 30,
       "critical": 15,
     },
@@ -158,13 +157,14 @@
     },
   },
   "network": {
-    // "interface": "wlp2*", // (Optional) To force the use of this interface
-    "format-wifi": "{essid} ({signalStrength}%) ",
-    "format-ethernet": "{ipaddr}/{cidr} ",
+    "interface": "wlp2*", // (Optional) To force the use of this interface
+    // "format-wifi": "{essid} ({signalStrength}%) ",
+    "format-wifi": "{ipaddr}/{cidr} ",
     "tooltip-format": "{ifname} via {gwaddr} ",
     "format-linked": "{ifname} (No IP) ",
     "format-disconnected": "Disconnected ⚠",
     "format-alt": "{ifname}: {ipaddr}/{cidr}",
+    "max-length": 40,
   },
   "pulseaudio": {
     // "scroll-step": 1, // %, can be a float
@@ -198,12 +198,12 @@
     // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
   },
   "custom/power": {
-    "format": "⏻ ",
-    "tooltip": false,
+    "format": " 󰣇  ",
+    "tooltip": true,
     "menu": "on-click",
     "menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
     "menu-actions": {
-      "shutdown": "shutdown",
+      "shutdown": "poweroff",
       "reboot": "reboot",
       "suspend": "systemctl suspend",
       "hibernate": "systemctl hibernate",
