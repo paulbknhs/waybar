@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+# Get the default sink volume and mute status
+info=$(wpctl get-volume @DEFAULT_AUDIO_SINK@)
+volume=$(echo "$info" | awk '{print $2 * 100}' | cut -d'.' -f1)
+muted=$(echo "$info" | grep -q MUTED && echo "🔇" || echo "")
+
+# Print the output for Waybar
+echo "$muted $volume%"
+
+# Listen for click events
+case $1 in
+  1) # Left click to toggle mute
+    wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+    ;;
+  4) # Scroll up to increase volume
+    wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
+    ;;
+  5) # Scroll down to decrease volume
+    wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
+    ;;
+esac

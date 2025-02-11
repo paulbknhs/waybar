@@ -41,7 +41,7 @@ button:hover {
 }
 
 #workspaces button.urgent {
-  background-color: #eb4d4b;
+  background-color: rgba(238, 74, 50, 90);
 }
 
 #pulseaudio,
