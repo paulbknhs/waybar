@@ -44,41 +44,30 @@ button:hover {
   background-color: rgba(238, 74, 50, 90);
 }
 
-#pulseaudio,
-#clock,
 #battery,
 #cpu,
 #memory,
 #disk,
 #temperature,
-#backlight,
-#wireplumber,
-#tray,
-#mode,
-#scratchpad {
-  margin: 2px;
+#backlight {
+  /* margin: 2px; */
   padding-left: 4px;
   padding-right: 4px;
 }
 
 #clock {
-  color: @maroon;
-  border-bottom: 2px solid @maroon;
+  color: @blue;
+  border-bottom: 2px solid @blue;
 }
 
 #clock.date {
   color: @mauve;
   border-bottom: 2px solid @mauve;
 }
-
-#pulseaudio {
-  color: @blue;
-  border-bottom: 2px solid @blue;
-}
-
 #network {
+  padding-left: 8px;
   color: @yellow;
-  border-bottom: 2px solid @yellow;
+  border-bottom: 1px solid @yellow;
 }
 
 #idle_inhibitor {
@@ -90,6 +79,9 @@ button:hover {
   color: @red;
 }
 
+#battery {
+  padding-right: 8px;
+}
 #battery.charging,
 #battery.plugged {
   color: @green;
@@ -104,11 +96,4 @@ button:hover {
 /* If workspaces is the rightmost module, omit right margin */
 .modules-right > widget:last-child > #workspaces {
   margin-right: 0;
-}
-
-#custom-vpn {
-  color: @lavender;
-  border-radius: 15px;
-  padding-left: 6px;
-  padding-right: 6px;
 }
