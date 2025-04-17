@@ -81,7 +81,7 @@
   },
   "network": {
     "format-wifi": "  {essid} ({signalStrength}%) ",
-    "format-ethernet": "  {essid}",
+    "format-ethernet": "  {ipaddr}",
     "tooltip-format": "{ifname} via {gwaddr} ",
     "format-linked": "{ifname} (No IP) ",
     "format-disconnected": "Disconnected ⚠",
