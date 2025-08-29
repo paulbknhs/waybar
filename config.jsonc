@@ -86,6 +86,7 @@
     "format-linked": "{ifname} (No IP) ",
     "format-disconnected": "Disconnected ⚠",
     "format-alt": "down: {bandwidthDownBytes} | up: {bandwidthUpBytes}",
+    "interval": 1,
     // "format-alt": "{ifname}: {ipaddr}/{cidr}",
     // "interface": "wlp2*", // (Optional) To force the use of this interface
     //   "format-wifi": "  {ipaddr}",
