@@ -85,7 +85,8 @@
     "tooltip-format": "{ifname} via {gwaddr} ",
     "format-linked": "{ifname} (No IP) ",
     "format-disconnected": "Disconnected ⚠",
-    "format-alt": "{ifname}: {ipaddr}/{cidr}",
+    "format-alt": "down: {bandwidthDownBytes} | up: {bandwidthUpBytes}",
+    // "format-alt": "{ifname}: {ipaddr}/{cidr}",
     // "interface": "wlp2*", // (Optional) To force the use of this interface
     //   "format-wifi": "  {ipaddr}",
     //   "tooltip-format": "{ifname} via {gwaddr} ",
