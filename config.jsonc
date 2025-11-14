@@ -2,8 +2,13 @@
 {
   "width": 1920, // Waybar width
   "spacing": 12, // Gaps between modules (4px)
-  "modules-left": ["custom/power", "hyprland/workspaces"],
-  "modules-center": ["clock"],
+  "modules-left": [
+    "custom/power",
+    "hyprland/workspaces"
+  ],
+  "modules-center": [
+    "clock"
+  ],
   "modules-right": [
     "cpu",
     "memory",
@@ -13,7 +18,6 @@
     "battery",
     "network",
   ],
-
   "hyprland/workspaces": {
     "disable-scroll": false,
     "all-outputs": true,
@@ -29,7 +33,6 @@
       "default": "",
     },
   },
-
   "clock": {
     "timezone": "Europe/Berlin",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
@@ -46,12 +49,26 @@
     "critical-threshold": 80,
     "format-critical": "{temperatureC}°C {icon}",
     "format": "{temperatureC}°C {icon}",
-    "format-icons": ["", "", ""],
+    "format-icons": [
+      "",
+      "",
+      ""
+    ],
   },
   "backlight": {
     // "device": "acpi_video1",
     "format": "{percent}% {icon}",
-    "format-icons": ["", "", "", "", "", "", "", "", ""],
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
   },
   "battery": {
     "states": {
@@ -66,7 +83,12 @@
     "format-alt": "{time} {icon}",
     // "format-good": "", // An empty format will hide the module
     // "format-full": "",
-    "format-icons": ["", "", "", ""],
+    "format-icons": [
+      "",
+      "",
+      "",
+      ""
+    ],
   },
   "power-profiles-daemon": {
     "format": "{icon}",
@@ -85,7 +107,7 @@
     "tooltip-format": "{ifname} via {gwaddr} ",
     "format-linked": "{ifname} (No IP) ",
     "format-disconnected": "Disconnected ⚠",
-    "format-alt": "down: {bandwidthDownBytes} | up: {bandwidthUpBytes}",
+    "format-alt": "  {bandwidthDownBytes} |   {bandwidthUpBytes}",
     "interval": 1,
     // "format-alt": "{ifname}: {ipaddr}/{cidr}",
     // "interface": "wlp2*", // (Optional) To force the use of this interface
@@ -96,7 +118,6 @@
     //   "format-alt": "{ifname}: {ipaddr}/{cidr}",
     //   "max-length": 40,
   },
-
   "custom/power": {
     "format": " 󰣇  ",
     "tooltip": true,
